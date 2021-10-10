@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/2.css">
+	<script src="js/3.js"></script>
+	<title>Document</title>
+	
+</head>
+<body onload="nameLoad()">
+	<header>
+		<div class="img">
+			<img src="js.jpg">
+		</div>
+
+		<div class="href">
+			<a href="#hello">Приветсвие</a>
+			<a href="#forname">Имя</a>
+			<a href="#three">Треугольник</a>
+			<a href="#String">Сравнение Строк</a>
+			<a href="#max">Max / Min</a>
+			<a href="#timer">Таймер</a>
+			<a href="#test">Тест</a>
+			<a href="#red_button">Красная Кнопка</a>
+		</div>
+		<div class="Name">
+			<p id="my_name"></p>
+		</div>
+	</header>
+
+	<div class="body">
+		
+		<div class="hello" id="hello">
+			
+			<div class="hello_text">
+				<h2>Начни Писать Код На JavaScript</h2>
+				<br>
+				<p>Язык JavaScript предназначен для выполнения в браузере наряду с HTML и CSS. Но, если эти языки предназначены для верстки структуры сайта, то JavaScript позволяет 'оживлять' web-страницы - делать их реагирующими на действия пользователя или демонстрировать некоторую динамичность (к примеру, смена картинок в блоке или красивые плавно выпадающие менюшки).</p>
+				<p>Ниже представлены примеры того, что можно сделать на JavaScript. </p>
+			</div>
+
+			<div class="hello_img">
+				<img src="image2.png" alt="">
+			</div>
+		</div>
+
+		<div class="forname" id="forname">
+			<div class="name_text">
+				<h2>Вввдите Ваше Имя</h2>
+				<p>Напишите ваше имя или любое слово, которое придёт вам в голову.</p>
+			</div>
+			<div class="name_form">
+				<input type="text" name="" class="form" id = "Name_save">
+				<button onclick="name_Save()">Отправить</button>
+				
+			</div>
+			<div class="how">
+				<div class="how_text">
+					<p>
+						Строка, которая написана в форме заключается в переменную методом "document.getElementById("").value". Затем эта строка проверяется на пустоту отдельно написаной функцией, в которой строка сравнивается с null, "" и undefined. 
+						Когда строка проходит проверку, она записывается куда нужно, спомощью метода "document.getElementById('my_name').innerHTML".
+					</p>
+					<p>
+						Строка, которая была написана последней, хранится в браузере с помощью localStorage. После того как строка проходит проверку её значение заноситься в хранилище функцией "localStorage.setItem("ключ", строка);". 
+						Во-время загрузки стайта запускается функция, которая берет значение из хранилища и записывает её в правый верхний угол сайта (" document.getElementById().innerHTML = localStorage.getItem(ключ) ")
+					</p>
+				</div>
+				<button onclick="how(0)">Как Работает</button>
+			</div>
+
+
+		</div>
+
+		<div class="three" id="three">
+			<div class="three_text">
+				<h2>Треугольник</h2>
+			<p>
+				Введите длину основания и высоту треугольника, а мы вычислим его площадь.
+			</p>
+			<div class="three_form">
+				<input type="text" name="" class="form" id = "side" value="Высота">
+				<input type="text" name="" class="form" id = "h" value="Основание">
+				<button onclick="triangle()">Отправить</button>
+				<p id="res_tri"></p>
+			</div>
+
+			</div>
+			<div class="how">
+				<div class="how_text">
+					<p>
+						Берет значения из форм так же как и в первом задании. Затем идет проверка на число. 
+						В функции проверку=и строки преобразуются в числа (x = Number(x)) затем идет проверка на NaN (если в строке есть хотя бы один символ, искоючение пара символов, то при преобразовании в тип Number вернет Nan). 
+						Проверка делается функцией isNan(). После проверки выводит на экран площадь треугольника (0,5 * высоту * основание). 
+					</p>
+
+				</div>
+				<button  onclick="how(1)">Как Работает</button>
+			</div>
+
+
+
+		</div>
+
+		<div class="String" id="String">
+			<h2>
+				Длина Строк
+			</h2>
+			<p>
+				Введите 2 строики. Мы проверим, одинаковой ли они длины.
+			</p>
+
+			<div class="string_form">
+				<input type="text" name="" class="form" id = "String1">
+				<input type="text" name="" class="form" id = "String2">
+				<button onclick="eq_String()">Проверить</button>
+				<p id="res_string"></p>
+			</div>
+
+			<div class="how">
+				<div class="how_text">
+					<p>
+						Берет строки из форм и сравнивает их длины свойством length, которое возвращает длину строки.
+						И в зависимости от результата выводит на экран, равны строки или не ровны.
+					</p>
+
+				</div>
+				<button  onclick="how(2)">Как Работает</button>
+			</div>
+		</div>
+
+		<div class="Max" id="max">
+			<h2>
+				Max/Min
+			</h2>
+			<p>
+				ВВедите 5 чисел через пробел. Мы найдём среди них наибольшее и наименьшее.
+			</p>
+
+			<input type="text" name="" class="form" id = "for_max">
+			<button onclick="add_Value()" >Добавить</button>
+			<Button onclick="findMAxMin()">Найти</Button>
+			<p id="var"></p>
+			<p id = "res_max"> </p>
+
+			<div class="how">
+				<div class="how_text">
+					<p>
+						При нажатии на кнопку добавить, берется значение из инпута и проверяется. 
+						Если число прошло проверку, то оно добавляется в массив функцие push().
+						Если добавляется шестое число в массив, то первое число удаляется функцией shift().
+					</p>
+
+					<p>
+						Для поиска максимума и минимума создаётся две переменные. Максимум и минимум находятся функцией Math.(max/min).apply(null, массив).
+					</p>
+
+				</div>
+				<button  onclick="how(3)">Как Работает</button>
+			</div>
+
+
+		</div>
+
+		<div class="timer" id="timer">
+			<h2>
+				Таймер
+			</h2>
+
+			<div class="full_timer">
+				
+				<input type="text"  id="hour" placeholder				="Часы">
+				<input type="text" id="minute" placeholder="Минуты">
+				<input type="text" id="sec" placeholder="Секунды"> 
+
+				<p id="time"></p>
+	
+				<div class="button_timer">
+					<button class="start_timer" onclick="start_time()">Начать</button>
+					<button class="pause_timer" id="pause_un" onclick="pause_unpause()">Остановить</button>
+					<button class="restart_timer" onclick="stop_time()">Выключить</button>
+				</div>
+			</div>
+
+			<div class="how">
+				<div class="how_text">
+					<p>
+						Нажав на кнопку запуска, значения из инпутов кладутся в переменные и эти переменные проверяются. 
+						После проверки запускается функция обратного отсчета, которая будет повторяться определённое время.
+						Делается это с помощью метода setInterval( функция, промежуток времени ). 
+					</p>
+					<p>
+						При нажатии на паузу запускается функция clearInterval(), которая останавливает повторяющуюся функцию в setInterval(). 
+						А кнопка переименовывается в кнопку "Возобновить".
+						При нажатии на неё обратный отсчет возобновляется, а кнопка переименовывается обратно.
+						Чтобы это можно было контролировать была создана булевая переменная isPause.
+					</p>
+
+					<p>
+						При нажатии на кнопку "Выключить", обратный отсчет останавливается, а все переменные обнуляются.
+					</p>
+
+				</div>
+				<button  onclick="how(4)">Как Работает</button>
+			</div>
+			
+		</div>
+		
+		<div class="test" id="test">
+			<h2>
+				Тест
+			</h2>
+			<p>
+				Пройдите небольшой тест по JS.
+			</p>
+			<br>
+			<br>
+			<div class = "all_test">
+				
+				<div class="quest">
+					<p>Какая переменная записана неверно?</p>
+					<br>
+
+
+					<div class="answers">
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans1" id="1_1" value="0"  class="ans1">
+							</div>
+							<div>
+								<label for="1_1" id="l1_1" class="label1">var num = "STRING";</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans1" id="1_2" value="0" class="ans1">
+							</div>
+							<div>
+								<label for="1_2" id="l1_2" class="label1">var isDone = 0;</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans1" id="1_3" value="0" class="ans1">
+							</div>
+							<div>
+								<label for="1_3" id="l1_3" class="label1">var b = false;</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans1" id="1_4" value="1" class="ans1">
+							</div>
+							<div>
+								<label for="1_4" id="l1_4" class="label1">var number = 12,5;</label>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+				<br>
+				<br>
+
+
+				<div class="quest">
+					<p>Что такое условный оператор?</p>
+					<br>
+
+
+					<div class="answers">
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans2" id="2_1" value="0" class="ans2">
+							</div>
+							<div>
+								<label for="2_1" id="l2_1" class="label2">Конструкция, что выполняет код несколько раз</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans2" id="2_2" value="0" class="ans2">
+							</div>
+							<div>
+								<label for="2_2" id="l2_2" class="label2">Конструкция для создания определенной переменной</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans2" id="2_3" value="1" class="ans2">
+							</div>
+							<div>
+								<label for="2_3" id="l2_3" class="label2">Оператор сравнения значений</label>
+							</div>
+						</div>
+						
+					</div>
+
+					
+				</div>
+				
+
+				<br>
+				<br>
+
+
+
+				<div class="quest">
+					<p>Где верно указано имя переменной?</p>
+					<br>
+
+
+					<div class="answers">
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans3" id="3_1" value="1" class="ans3">
+							</div>
+							<div>
+								<label for="3_1" id="l3_1" class="label3">var num_1;</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans3" id="3_2" value="0" class="ans3">
+							</div>
+							<div>
+								<label for="3_2" id="l3_2" class="label3">var num-1;</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans3" id="3_3" value="0" class="ans3">
+							</div>
+							<div>
+								<label for="3_3" id="l3_3" class="label3">ver num;</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans3" id="3_4" value="0" class="ans3">
+							</div>
+							<div>
+								<label for="3_4" id="l3_4" class="label3">var 1num;</label>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+
+				<br>
+				<br>
+
+
+
+				<div class="quest">
+					<p>Какие значения можно хранить в переменных?</p>
+					<br>
+
+
+					<div class="answers">
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans4" id="4_1" value="0" class="ans4">
+							</div>
+							<div>
+								<label for="4_1" id="l4_1" class="label4">Только числа и строки</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans4" id="4_2" value="0" class="ans4">
+							</div>
+							<div>
+								<label for="4_2" id="l4_2" class="label4">Строки, числа с точкой и простые числа</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans4" id="4_3" value="1" class="ans4">
+							</div>
+							<div>
+								<label for="4_3" id="l4_3" class="label4">Строки, числа с точкой, простые числа и булевые выражения</label>
+							</div>
+						</div>
+						
+					</div>
+
+					
+				</div>
+
+
+				<br>
+				<br>
+
+				<div class="quest">
+					<p>Где верно указан запуск всплывающего окна?</p>
+					<br>
+
+
+					<div class="answers">
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans5" id="5_1" value="0" class="ans5">
+							</div>
+							<div>
+								<label for="5_1" id="l5_1" class="label5">new alert ("Hi")</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans5" id="5_2" value="0" class="ans5">
+							</div>
+							<div>
+								<label for="5_2" id="l5_2" class="label5">info ("Hi")</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans5" id="5_3" value="1" class="ans5">
+							</div>
+							<div>
+								<label for="5_3" id="l5_3" class="label5">alert ("Hi")</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans5" id="5_4" value="0" class="ans5">
+							</div>
+							<div>
+								<label for="5_4" id="l5_4" class="label5">Нет верных вариантов</label>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+
+				<br>
+				<br>
+
+				<div class="quest">
+					<p>Где можно использовать JavaScript?</p>
+					<br>
+
+
+					<div class="answers">
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans6" id="6_1" value="0" class="ans6">
+							</div>
+							<div>
+								<label for="6_1" id="l6_1" class="label6">Мобильные приложения</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans6" id="6_2" value="0" class="ans6">
+							</div>
+							<div>
+								<label for="6_2" id="l6_2" class="label6">Веб-приложения</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans6" id="6_3" value="0" class="ans6">
+							</div>
+							<div>
+								<label for="6_3" id="l6_3" class="label6">Серверные приложения</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans6" id="6_4" value="1" class="ans6">
+							</div>
+							<div>
+								<label for="6_4" id="l6_4" class="label6">Можно во всех перечисленных</label>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+
+				<br>
+				<br>
+
+
+				<div class="quest">
+					<p>В чем отличие между локальной и глобальной переменной?</p>
+					<br>
+
+
+					<div class="answers">
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans7" id="7_1" value="0" class="ans7">
+							</div>
+							<div>
+								<label for="7_1" id="l7_1" class="label7">Локальные можно переопределять, глобальные нельзя</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans7" id="7_2" value="1" class="ans7">
+							</div>
+							<div>
+								<label for="7_2" id="l7_2" class="label7">Глобальные видны повсюду, локальные только в функциях</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans7" id="7_3" value="0" class="ans7">
+							</div>
+							<div>
+								<label for="7_3" id="l7_3" class="label7">Локальные видны повсюду, глобальные только в функциях</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans7" id="7_4" value="0" class="ans7">
+							</div>
+							<div>
+								<label for="7_4" id="l7_4" class="label7">Глобальные можно переопределять, локальные нельзя</label>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+
+
+				<br>
+				<br>
+
+				<div class="quest">
+					<p>В чем разница между confirm и prompt?</p>
+					<br>
+
+
+					<div class="answers">
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans8" id="8_1" value="0" class="ans8">
+							</div>
+							<div>
+								<label for="8_1" id="l8_1" class="label8">Они ничем не отличаются</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans8" id="8_2" value="0" class="ans8">
+							</div>
+							<div>
+								<label for="8_2" id="l8_2" class="label8">confirm вызывает диалоговое окно с полем для ввода, prompt - окно с подтверждением</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans8" id="8_3" value="1" class="ans8">
+							</div>
+							<div>
+								<label for="8_3" id="l8_3" class="label8">prompt вызывает диалоговое окно с полем для ввода, confirm - окно с подтверждением</label>
+							</div>
+						</div>
+					
+					</div>
+
+					
+				</div>
+
+<br>
+				<br>
+
+				<div class="quest">
+					<p>Где верно указан вывод данных?</p>
+					<br>
+
+
+					<div class="answers">
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans9" id="9_1" value="0" class="ans9">
+							</div>
+							<div>
+								<label for="9_1" id="l9_1" class="label9">print(Hello);</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans9" id="9_2" value="0" class="ans9">
+							</div>
+							<div>
+								<label for="9_2" id="l9_2" class="label9">prompt("Hello")</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans9" id="9_3" value="0" class="ans9">
+							</div>
+							<div>
+								<label for="9_3" id="l9_3" class="label9">write("Hello");</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans9" id="9_4" value="1" class="ans9">
+							</div>
+							<div>
+								<label for="9_4" id="l9_4" class="label9">console.log("Hello");</label>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+
+
+
+				<br>
+				<br>
+
+				<div class="quest">
+					<p>true + false =</p>
+					<br>
+
+
+					<div class="answers">
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans10" id="10_1" value="1" class="ans10">
+							</div>
+							<div>
+								<label for="10_1" id="l10_1" class="label10">1</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans10" id="10_2" value="0" class="ans10">
+							</div>
+							<div>
+								<label for="10_2" id="l10_2" class="label10">0</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans10" id="10_3" value="0" class="ans10">
+							</div>
+							<div>
+								<label for="10_3" id="l10_3" class="label10">Nan</label>
+							</div>
+						</div>
+						<div class="answer">
+							<div>
+								<input type="radio" name="ans10" id="10_4" value="0" class="ans10">
+							</div>
+							<div>
+								<label for="10_4" id="l10_4" class="label10">Будет ошибка</label>
+							</div>
+						</div>
+					</div>
+
+					
+				</div>
+
+			</div>
+
+
+			<br>
+				<br>
+
+
+			<button onclick="check_test()">Отправить</button>
+			<br>
+			<p id = "res_test">000</p>
+			<br>
+
+			<div class="how">
+				<div class="how_text">
+					<p>
+						В функции проверки вначале запускается цикл, с помощью которого мы можем пройти по каждому вопросу отдельно.
+						Зате создаем переменную которая принимает массив вариантов ответа на этот вопрос, для этого используется метод getElementsByClassName("повторяющаяся часть"+номер вопроса).
+						Дальше идёт обход этого массива и и идет проверка наших ответов. Свойство checked позволяет на найти вариант ответа которые мы выбрали. 
+						Затем проверяем чему равен атрибут value у этого переключателя (их значения записаны в html-коде). Если ответ правильный, то переменная отвечающая за кол-во правильных ответов увеличивается.
+						В конце количество правильных ответов выводиться на экран. 
+					</p>
+					<p>
+						Покраску правильных и неправильных ответов выполнаяет отдельная функция.
+						Работает она также как и функция описанная выше. Только теперь мы создаём ещё массив тектовой части вариантов ответа.
+						Все правильные ответы красятся в зелёный, а наши неправильные в красный. Меняем цвета с помощью изменения свойства style у нашего объекта.
+					</p>
+	
+				</div>
+				<button  onclick="how(5)">Как Работает</button>
+			</div>
+	</div>
+
+		<div class="red_button" id="red_button">
+			<button onclick="plash_open()">
+				Нажми Сюда
+			</button>
+			
+		</div>
+
+		<div class="how">
+			<div class="how_text">
+				<p>
+					При нажатии на кнопку, меняется высота спратанной плашки (element.style = "CSS стили").
+					Плавность появления обеспечивает CSS-свойство transition, которая отвечает за эффект перехода. 
+					В нашем случае было указано только время за которое объект должен перейти из одного состояние в другое.
+				</p>
+				<p>
+					Имя было взято из хранилища. Сегодняшняя дата была взята из функций объекта Date: getDate(), getMonth() и getFullYear().
+				</p>
+
+			</div>
+			<button  onclick="how(6)">Как Работает</button>
+		</div>
+		
+	</div>
+
+
+	<div id="pole" class="pole" onclick="plash_closed()">
+		<p id="p_data">
+
+		</p>
+		<p id="p_name">
+
+		</p>
+	</div>
+</body>
+</html>

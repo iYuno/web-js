@@ -1,0 +1,246 @@
+*{
+	padding: 0;
+	margin: 0;
+
+}
+
+a, a:visited{
+	text-decoration: none;
+	color: white;
+}
+header{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: darkorange;
+	height: 40px;
+	align-items: center;
+	padding: 40px, 5px;
+	position: fixed;
+}
+
+.href{
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.img {
+	margin-left: 5%;
+	width: 40px;
+	height: 40px;
+}
+.img img{
+	width: 100%;
+	height: 100%;
+}
+
+.Name{
+	margin-right: 5%;
+	text-align: center;
+    width: 10%;
+}
+
+.body{
+	padding-top: 20px;
+	width: 70%;
+	height: 7000px;
+	margin: auto;
+	background-color: wheat;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.hello{
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.hello_text, .hello_img{
+	width: 45%;
+	height: 250px;
+}
+.hello_img img{
+	width: 100%;
+	height: 100%;
+}
+
+.forname{
+	align-items: center;
+	height: 350px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.name_text{
+	text-align: center;
+}
+
+.three{
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 200px;
+	align-items: center;
+}
+
+.three_text{
+	width: 350px;
+	text-align: center;
+	margin-left: 20px;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+#res_tri{
+	height: 40px;
+	width: 40px;
+}
+
+.three_img{
+	width: 70px;
+	height: 70px;
+}
+
+.String, .Max{
+	align-items: center;
+	height: 300px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.string_form{
+	height: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.timer{
+	align-items: center;
+	height: 300px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.button_timer{
+	width: 167px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.button_timer button{
+	height: 20px;
+	width: 50px;
+}
+
+.full_timer{
+	display: flex;
+	flex-direction: column;
+	height: 60px;
+	justify-content: space-around;
+}
+
+.timer_s{
+	text-align: center;
+	font-size: 30px;
+}
+
+.test{
+	align-items: center;
+	height: 1000px;
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.all_test{
+	align-self:flex-start;
+
+}
+
+.answers{
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.answer{
+	display: flex;
+	flex-direction: row;
+}
+.answer label{
+	margin-left: 10px;
+}
+
+
+
+.red_button{
+	width: 30%;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+.red_button button{
+	background-color: red;
+}
+
+
+.pole {
+	width: 100%;
+	height: 0;
+	background-color: royalblue;
+	top: 0%;
+	overflow: hidden;
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	transition: 1.5s;
+}
+
+#alert{
+	display: none;
+}
+
+.how{
+	width: 60%;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.how button{
+	width: 50%;
+
+}
+
+.how_text{
+	display: none;
+}

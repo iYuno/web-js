@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Самая Длинная Строка</h2>
+        <input id="Number1" type="text" placeholder="Строка">
+
+        <div class="res_string"> 
+
+        </div>
+
+        
+        <button onclick="findMaxString()">Найти</button>
+        <button onclick="addString()">Добавить</button>
+        <button onclick="clearString()">Очистить</button>
+
+        <div class="res_1">
+            <p id="res1"></p>
+        </div>
+    </div>
+
+    <div>
+        <h2>Часто Встречаемы Символ В Строке</h2>
+        <input id="Number2" type="text" placeholder="Строка">
+<br>
+        <div class="res_char"> 
+
+        </div>
+        <button onclick="finnChar()">Найти</button>
+        <button onclick="clearChar()">Очистить</button>
+    </div>
+
+    <div>
+        <h2>Заменить Символ</h2>
+        <p>Ваша Строка</p>
+        <p id="string"></p>
+        <input id="Number3" type="text" placeholder="Символ">
+        <div class="new_string"> 
+
+        </div>
+        <button onclick="removeChar()">Подставить</button>
+    </div>
+
+    <div>
+        <h2>Строки Анаграммы</h2>
+        <input id="Number4_1" type="text" placeholder="Строка 1">
+        <input id="Number4_2" type="text" placeholder="Строка 2">
+        <p id="anagramma">
+
+        </p>
+
+        <button onclick="isAnagramma()">Проверить</button>
+    </div>
+</body>
+</html>

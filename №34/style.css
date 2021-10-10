@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+header{
+    width: 100%;
+    height: 50px;
+    background-color: coral;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.weather{
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 20px;
+}
+
+header button{
+    position: absolute;
+    left: 50px;
+    top: 5px;
+    width: 200px;
+    height: 20px;
+    border: 1px solid blue ;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+.icon img{
+    width: 60px;
+    height: 60px;
+}
+
+ #plus_film{
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    width: 150px;
+    height: 20px;
+    border: 1px solid blue ;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    text-align: center;
+}
+#plus_film:hover{
+    background-color: dodgerblue;
+}
+#plus_film:active{
+    background-color: darkblue;
+}
+
+
+#form{
+   
+    width: 700px;
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: absolute;
+    padding: auto;
+    background-color: khaki;
+    top: 10px;
+    border-radius: 10px;
+    opacity: 1;
+}
+
+.container_for_info{
+    
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#container_form{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    background-color: rgb(255, 127, 80,0.7);
+
+}
+
+
+#form button{
+    width: 30%;
+}
+
+#form input, #form textarea{
+    border-radius: 10px;
+    padding: 2px 5px;
+}
+
+#close_form{
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+#close_form div{
+    height: 27px;
+    border: 1px solid black;
+
+}
+
+#close_form div:first-child{
+    transform: rotate(45deg);
+}
+#close_form div:last-child{
+    transform: rotate(-45deg);
+}
+
+#poster{
+    width: 150px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.last_cont{
+    display: flex;
+    flex-direction: column;
+}
+
+#load_post{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+}
+#form_load_post{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_for_info input {
+    width: 80%;
+}
+.container_for_info p{
+    width: 50%;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+#form_country{
+    width: 40%;
+}
+#form_rating{
+    width: 10%;
+}
+
+.list_film{
+    padding-top: 55px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.movie{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    padding-top: 5px;
+}
+
+.movie img{
+    width: 200px;
+    height: 300px;
+}
+
+.film_info{
+    margin-left: 30px;
+
+}
+
+.more_info p{
+    margin: 2px;
+}
+.more_info{
+    padding-top: 5px;
+}
+.setting_find{
+    display: flex;
+    flex-direction: row;
+}
+
+.more_info div{
+    display: flex;
+    flex-direction: row;
+}
+.more_info div p:last-child{
+    font-style: oblique;
+}
+
+#film_more_info{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 70%;
+    top: 50px;
+    background-color: burlywood;
+    z-index: 2;
+    left: 15%;
+}
+
+#photo_more{
+    width: 200px;
+    height: 300px;
+}
+
+#more{
+    display: flex;
+    flex-direction: row;
+}
+
+#more_info_more{
+    padding-top: 5px;
+
+}
+
+#film_info_more{
+    margin-left: 10px;
+}
+
+#more_info_more p{
+    margin: 2px;
+}
+
+#more_info_more div{
+    display: flex;
+    flex-direction: row;
+}
+#more_info_more div p:last-child{
+    font-style: oblique;
+}
+
+.full_comment{
+    display: flex;
+    flex-direction: column;
+}
+
+.name_rat{
+    display: flex;
+    flex-direction: row;
+    padding:   15px 0;
+}
+.nick, .rat{
+    width: 50%;
+}
+
+.rat{
+    display: flex;
+    flex-direction: row;
+}
+
+.name{
+    cursor: pointer;
+}
+
+#buuton_for_film{
+    position: absolute;
+    right: 5px;
+    top: 280px;
+}
+
+.write_comment{
+    overflow: hidden;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.up_comment, .nickname, .mark{
+    display: flex;
+    flex-direction: row;
+}
+
+#new_com{
+    margin: 10px 20px;
+    border-radius: 5px;
+}
+
+.up_comment{
+    margin: 0 20px;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+
+#scene{
+    margin: 10px 20px;
+}
+
+#more{
+    margin: 3px 10px;
+}
+
+.close_film{
+    position: absolute;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    right: 2px;
+}

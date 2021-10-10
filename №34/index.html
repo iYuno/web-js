@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body id="body" onload="load_save()" >
+
+    <header>
+        <button id="weathe_info">
+            Получить данные о погоде
+        </button>
+        <div class="weather">
+            <p class="city">
+
+            </p>
+            <div class="icon">
+
+            </div>
+            <p class="grad">
+
+            </p>
+        </div>
+        <div id="plus_film">Добавить Фильм</div>
+    </header>
+
+<div id="container_form">
+    <div id="form" >
+        <div id="close_form">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="container_for_info">
+            <p>Название</p>
+            <input id="form_name" class="text_form" type="text">
+        </div>
+        <div class="container_for_info">
+            <p>Страна</p>
+            <select id="form_country" name="">
+                
+            </select>
+        </div>
+        <div class="container_for_info">
+            <p>Жанр</p>
+            <input id="form_genre" class="text_form" type="text">
+        </div> 
+        <div class="container_for_info">
+            <p>Режисёр</p>
+            <input id="form_director" class="text_form form_director" type="text"> 
+        </div>
+        <div class="container_for_info">
+            <p>Сценарист</p>
+            <input id="form_screenwriter" class="text_form" type="text">
+        </div>
+        <div class="container_for_info">
+            <p>Продюссер</p>
+            <input id="form_producer" class="text_form" type="text">
+        </div>
+        <div class="container_for_info">
+            <p>Оператор</p>
+            <input id="form_operator" class="text_form" type="text">
+        </div>
+        <div class="container_for_info">
+            <p>Композитор</p>
+            <input id="form_composer" class="text_form" type="text">
+        </div>
+        <div class="container_for_info">
+            <p>Бюджет</p>
+            <input id="form_budget" class="text_form" type="text">
+        </div>
+        <div class="container_for_info">
+            <p>Сборы</p>
+            <input id="form_fees" class="text_form" type="text">
+        </div>
+        <div class="container_for_info">
+            <p>Возрастной рейтинг</p>
+            <select id="form_rating" name="">
+                <option value="">0+</option>
+                <option value="">6+</option>
+                <option value="">12+</option>
+                <option value="">16+</option>
+                <option value="">18+</option>
+            </select>
+        </div>
+        <div class="container_for_info">
+            <p>Длительность</p>
+            <input id="form_durat" type="text">
+        </div>
+        <div class="container_for_info">
+            <p>Дата выхода</p>
+            <input id="form_date" type="date">
+        </div>
+        <div class="container_for_info last_cont">
+            <p>Постер</p>
+            <div id="load_post">
+                <img id="poster" src="" alt="">
+                <div id="form_load_post">
+                    <input  id="link_img"  type="text">
+                    <button id="load_img"  >Загрузить</button>
+                </div>
+            </div>
+            <div class="container_for_info">
+                <p>Описание</p>
+                <textarea name="" id="text_film" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+
+
+        <button  id="AddFlm" onclick="addFilm()">Добавить</button>
+    </div>
+
+</div>
+
+
+
+    <div class="list_film">
+        <div class="setting_find">
+
+    
+            <div class="filtr">
+                Филтровать
+
+                <div class="filter_container">
+                    <p>
+                        Жанр
+                    </p>
+                    <input type="text" id="filter_gerne">
+                    <p>
+                        Страна
+                    </p>
+                    <input type="text" id="filter_country">
+                    <p>
+                        Год Создания
+                    </p>
+                    <input type="text" id="filter_date">
+                </div>
+            </div>
+            <button id="filter_button">Найти</button>
+        </div>
+        
+        
+
+    </div>
+
+
+
+    <div id="film_more_info">
+        <div id="more">
+            <img  id="photo_more" src="" alt="">
+            <div id="film_info_more">
+                <h2  id="name_more">Название</h2>
+    
+                <div id="more_info_more">
+                    <div class="close_film"></div>
+                    <div id="country_container_more">
+                        <p>Страна:</p>
+                        <p  id="country_more">111</p>
+                    </div>
+                    <div id="genre_container_more">
+                        <p>Жанр:</p>
+                        <p  id="genre_more"></p>
+                    </div>
+                    <div id="director_container_more">
+                        <p>Режисёр:</p>
+                        <p  id="director_more"></p>
+                    </div>
+                    <div id="screenwriter_container_more">
+                        <p>Сценарист:</p>
+                        <p  id="screenwriter_more"></p>
+                    </div>
+                    <div id="producer_container_more">
+                        <p>Продюссер:</p>
+                        <p  id="producer_more"></p>
+                    </div>
+                    <div id="operator_container_more">
+                        <p>Оператор:</p>
+                        <p  id="operator_more"></p>
+                    </div>
+                    <div id="composer_container_more">
+                        <p>Композитор:</p>
+                        <p  id="composer_more"></p>
+                    </div>
+                    <div id="budget_container_more">
+                        <p>Бюджет:</p>
+                        <p  id="budget_more"></p>
+                    </div>
+                    <div id="fees_container_more">
+                        <p>Сборы:</p>
+                        <p  id="fees_more"></p>
+                    </div>
+                    <div id="rating_container_more">
+                        <p>Возрастной рейтинг:</p>
+                        <p  id="rating_more"></p>
+                    </div>
+                    <div id="durat_container_more">
+                        <p>Длительность:</p>
+                        <p  id="durat_more"></p>
+                    </div>
+                    <div id="date_container_more">
+                        <p>Дата выхода:</p>
+                        <p  id="date_more"></p>
+                    </div>
+                </div>
+                <div id="buuton_for_film">
+                    <button id="delete">Удалить</button>
+                    <button id="add_comment">Написать Отзыв</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="scene">
+            <p>
+                Сценарий
+            </p>
+            <p  id="scene_text">
+
+            </p>
+        </div>
+        <hr>
+        <div class="write_comment">
+            <div class="up_comment">
+                <div class="nickname">
+                    <p>Ник:</p>
+                    <input id="my_nick" type="text">
+                </div>
+                <div class="mark">
+                    <p>Оценка:</p>
+                    <select name="" id="marks">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                    </select>
+                </div>
+                <button id="end_comment">Добавить</button>
+            </div>
+            <textarea name="" id="new_com" cols="30" rows="10"></textarea>
+            <hr>
+        </div>
+        <div id="all_comments">
+            <h3>Комментарии</h3>
+            
+        </div>
+    </div>
+
+</body>
+<script src="code123.js"></script>
+</html>
